@@ -1,0 +1,25 @@
+
+<div class="full">
+    <div class="container">
+        <div class="menu">
+            <mat-icon *ngIf="!clicked" (click)="click_()">
+                menu
+            </mat-icon>
+            <mat-icon *ngIf="clicked">
+                close
+            </mat-icon>
+        </div> 
+        <div class="logo" routerLink="">
+            Logo
+        </div>
+        <button *ngIf="logout" class="login"> {{login}}</button>
+    </div>
+    <div class="slide" *ngIf="clicked">
+        <div>
+            Ajouter votre restaurant
+        </div>
+        <div>
+            Devenir livreur
+        </div>
+    </div>
+</div>

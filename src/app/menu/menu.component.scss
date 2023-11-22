@@ -1,0 +1,40 @@
+.container{
+    display: flex;
+    align-items: center;
+    
+    padding: 10px;
+    justify-content: space-between;
+    height: 70px;
+    >.menu{
+        >mat-icon{
+            font-size: 30px;    
+            font-weight:500
+        }
+    }
+    >.logo{
+        font-size: 30px;
+        font-weight: bolder;
+        
+    }
+    >.login{
+        background-color: rgb(238, 238, 238);
+        color: black;
+        border-radius: 15px;
+        height: 30px;
+        border: none;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+
+
+    }
+}
+.full{
+    display: flex;
+    flex-direction: column;
+}
+.slide{
+    padding: 10px;
+    border-bottom: 0.4px solid rgba($color: #000000, $alpha: 0.4);
+}
+  

@@ -1,0 +1,54 @@
+<app-menu></app-menu>
+<div class="container">
+    <div class="localisation">
+        <div class="ville">
+            <select name="ville" id="ville">
+                <option>Pointe Noire</option>
+                <option>Brazzaville</option>
+              </select>
+        </div>
+        <div class="livraison">
+            <div class="item">Livraison</div>
+            <div class="item">Sur place</div>
+        </div>
+    </div>
+    <div class="recherche">
+        <div>
+            <input id="recherche" placeholder="restaurants, plats, courses ..."/>
+        </div>
+        <div>
+            <mat-icon>search</mat-icon>
+        </div>
+        
+    </div>
+    <div class="cards"  (click)="goToRestaurantDetails()">
+        <img src="../../assets/banniere.jpg" alt="">
+        <label>Nom du restaurant ..</label>
+        Délais de préparation 10 - 20min
+    </div>
+    <div class="cards" (click)="goToRestaurantDetails()" >
+        <img src="../../assets/banniere.jpg" alt="">
+        <label>Nom du restaurant ..</label>
+        Délais de préparation 10 - 20min
+    </div>
+    <div class="cards" (click)="goToRestaurantDetails()">
+        <img src="../../assets/banniere.jpg" alt="">
+        <label>Nom du restaurant ..</label>
+        Délais de préparation 10 - 20min
+    </div>
+    <div class="cards" (click)="goToRestaurantDetails()">
+        <img src="../../assets/banniere.jpg" alt="">
+        <label>Nom du restaurant ..</label>
+        Délais de préparation 10 - 20min
+    </div>
+    <div class="cards" (click)="goToRestaurantDetails()">
+        <img src="../../assets/banniere.jpg" alt="">
+        <label>Nom du restaurant ..</label>
+        Délais de préparation 10 - 20min
+    </div>
+    <div class="cards" (click)="goToRestaurantDetails()">
+        <img src="../../assets/banniere.jpg" alt="">
+        <label>Nom du restaurant ..</label>
+        Délais de préparation 10 - 20min
+    </div>
+</div>
