@@ -5,7 +5,7 @@
             <mat-icon *ngIf="!clicked" (click)="click_()">
                 menu
             </mat-icon>
-            <mat-icon *ngIf="clicked">
+            <mat-icon *ngIf="clicked" (click)="click_()">
                 close
             </mat-icon>
         </div> 

@@ -7,13 +7,15 @@ import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { StoreComponent } from './store/store.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     MenuComponent,
-    StoreComponent
+    StoreComponent,
+    FooterComponent
   ],
   imports: [
     MatIconModule,
