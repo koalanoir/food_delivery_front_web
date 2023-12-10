@@ -18,7 +18,7 @@ export class StoreComponent {
     this.route.queryParams.subscribe(params => {
       this.id = params['id'];
     });
-    this.http.get<any>('http://localhost:3000/api/restaurants/'+this.id)
+    this.http.get<any>('https://fooddeliverapi-5zsfs0f5o-koalanoir.vercel.app/api/restaurants/'+this.id)
     .subscribe(response => {
       this.Restaurant = response;
       this.items=this.Restaurant.items
