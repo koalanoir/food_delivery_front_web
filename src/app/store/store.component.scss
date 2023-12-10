@@ -1,3 +1,14 @@
+.panier{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    >button{
+        border-radius: 15px;
+        background-color: #000000;
+        color: rgba($color: #ffffff, $alpha: 0.8);
+        padding: 10px;
+    }
+}
 .container{
     display: flex;
     flex-direction: column;
@@ -42,7 +53,8 @@
             }
             >.photo{
                 >img{
-                    width: 70px;
+                    width: 80px;
+                    height: 90px;
                     border-radius: 10px;
                 }
             }
@@ -56,8 +68,8 @@
     >.presentation{
         color: rgb(4, 62, 100);
         >img{
-            width: 100vw;
-            height: 150px;
+            width: 700vw;
+            height: 250px;
         }
         >.details{
             display: flex;
@@ -77,8 +89,9 @@
 @media (min-width: 450px){
     .presentation{
         >img{
-            width: 100vw;
+            width: 70vw!important;
             height: 300px !important;
+            border-radius: 20px;
         }
     }
     .menus{

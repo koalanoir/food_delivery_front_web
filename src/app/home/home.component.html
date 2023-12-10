@@ -21,47 +21,12 @@
         </div>
         
     </div>
-    <div class="cards"  (click)="goToRestaurantDetails()">
-        <img src="../../assets/banniere.jpg" alt="">
+    <div *ngFor="let restaurant of restaurants" class="cards" (click)="goToRestaurantDetails( restaurant)">
+        <img [src]="restaurant.photo" alt="">
         <div class="details">
-            <label>Nom du restaurant ..</label>
-            Délais de préparation 10 - 20min
-        </div>
-
-    </div>
-    <div class="cards" (click)="goToRestaurantDetails()" >
-        <img src="../../assets/banniere.jpg" alt="">
-        <div class="details">
-            <label>Nom du restaurant ..</label>
-            Délais de préparation 10 - 20min
+          <label><h2>{{ restaurant.nom }}</h2></label>
+          Délais de préparation {{ restaurant.delai }}
         </div>
     </div>
-    <div class="cards" (click)="goToRestaurantDetails()">
-        <img src="../../assets/banniere.jpg" alt="">
-        <div class="details">
-            <label>Nom du restaurant ..</label>
-            Délais de préparation 10 - 20min
-        </div>
-    </div>
-    <div class="cards" (click)="goToRestaurantDetails()">
-        <img src="../../assets/banniere.jpg" alt="">
-        <div class="details">
-            <label>Nom du restaurant ..</label>
-            Délais de préparation 10 - 20min
-        </div>
-    </div>
-    <div class="cards" (click)="goToRestaurantDetails()">
-        <img src="../../assets/banniere.jpg" alt="">
-        <div class="details">
-            <label>Nom du restaurant ..</label>
-            Délais de préparation 10 - 20min
-        </div>
-    </div>
-    <div class="cards" (click)="goToRestaurantDetails()">
-        <img src="../../assets/banniere.jpg" alt="">
-        <div class="details">
-            <label>Nom du restaurant ..</label>
-            Délais de préparation 10 - 20min
-        </div>
-    </div>
+      
 </div>

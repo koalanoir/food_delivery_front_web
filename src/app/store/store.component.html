@@ -1,10 +1,11 @@
 <app-menu></app-menu>
+<div class="panier"><button>Panier * {{articles}}</button></div>
 <div class="container">
     <div class="presentation">
-        <img src="../../assets/banniere.jpg" alt="photo de presentation du restaurzant">
+        <img [src]="Restaurant.photo" alt="photo de presentation du restaurzant">
         <div class="details">
             <div class="nom">
-                {{nom}}
+                {{Restaurant.nom}}
             </div>
             <div class="distance">
                 {{distance}}
@@ -12,55 +13,21 @@
         </div>
     </div>
     <div class="livraison">
-        <div class="item">Livraison</div>
+        <div class="item liv">Livraison</div>
         <div class="item">Sur place</div>
     </div>
     <label> La carte :</label> 
     <div class="menus">
-        
-        <div class="menu-item">
+        <div *ngFor="let item of items" class="menu-item">
             <div class="details">
-                <h3>nom du plat</h3>
-                <p>prix : ...fcfa</p>
-                rectte ...
+                <h3>{{item.nom}}</h3>
+                <p>{{item.prix}} fcfa</p>
+                {{item.ingredients}}
             </div>
             <div class="photo">
-                <img src="../../assets/plat.jpg" alt="plat">
+                <img [src]="item.photo" alt="plat">
             </div>
-            <mat-icon>add_shopping_cart</mat-icon>
-        </div>
-        <div class="menu-item">
-            <div class="details">
-                <h3>nom du plat</h3>
-                <p>prix : ...fcfa</p>
-                rectte ...
-            </div>
-            <div class="photo">
-                <img src="../../assets/plat.jpg" alt="plat">
-            </div>
-            <mat-icon>add_shopping_cart</mat-icon>
-        </div>
-        <div class="menu-item">
-            <div class="details">
-                <h3>nom du plat</h3>
-                <p>prix : ...fcfa</p>
-                rectte ...
-            </div>
-            <div class="photo">
-                <img src="../../assets/plat.jpg" alt="plat">
-            </div>
-            <mat-icon>add_shopping_cart</mat-icon>
-        </div>
-        <div class="menu-item">
-            <div class="details">
-                <h3>nom du plat</h3>
-                <p>prix : ...fcfa</p>
-                rectte ...
-            </div>
-            <div class="photo">
-                <img src="../../assets/plat.jpg" alt="plat">
-            </div>
-            <mat-icon>add_shopping_cart</mat-icon>
+            <mat-icon (click)="ajouter()">add_shopping_cart</mat-icon>
         </div>
     </div>
 </div>
