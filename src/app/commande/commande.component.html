@@ -1,0 +1,11 @@
+<div class="tab">
+    <h2>Pannier :</h2>
+    <ul *ngFor="let item of getCommandeArticles()" class="liste">
+        <li>
+            {{item.getNom()}} {{item.getPrix()}} fcfa
+        </li>
+    </ul>
+    <h2>Total : {{getTotal()}} fcfa</h2> 
+    <button class="enligne">Payer en ligne</button>
+    <button class="surplace">Payer sur place</button>
+</div>

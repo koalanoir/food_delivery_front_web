@@ -9,6 +9,7 @@ import { StoreComponent } from './store/store.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CommandeComponent } from './commande/commande.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     MenuComponent,
     StoreComponent,
-    FooterComponent
+    FooterComponent,
+    CommandeComponent
   ],
   imports: [
     MatIconModule,

@@ -1,14 +1,10 @@
 <app-menu></app-menu>
-<div class="panier"><button>Panier * {{articles}}</button></div>
 <div class="container">
     <div class="presentation">
-        <img [src]="Restaurant.photo" alt="photo de presentation du restaurzant">
+        <img [src]="getRestaurantPhoto()" alt="photo de presentation du restaurzant">
         <div class="details">
             <div class="nom">
-                {{Restaurant.nom}}
-            </div>
-            <div class="distance">
-                {{distance}}
+                {{getRestaurantName()}}
             </div>
         </div>
     </div>
@@ -27,7 +23,14 @@
             <div class="photo">
                 <img [src]="item.photo" alt="plat">
             </div>
-            <mat-icon (click)="ajouter()">add_shopping_cart</mat-icon>
+            <mat-icon (click)="ajouter(item.id)">add_shopping_cart</mat-icon>
         </div>
     </div>
+    <div *ngIf="getArticles()>0" (click)="voirPannier()" class="recap">
+        voir le pannier ({{getArticles()}} articles)
+    </div>
+</div>
+<div *ngIf="voir" class="pannier">
+    <mat-icon (click)="fermerPannier()">close</mat-icon>
+    <app-commande [commande]="getCommande()"></app-commande>
 </div>

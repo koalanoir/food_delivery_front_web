@@ -11,7 +11,12 @@ export class HomeComponent {
 
 
   ngOnInit(): void {
-    this.http.get<any>('https://fooddeliverapi-5zsfs0f5o-koalanoir.vercel.app/api/restaurants')
+    this.http.get<any>('http://localhost:3000/api/restaurants')
+      .subscribe(response => {
+        this.restaurants = response;
+        console.log(response); // Mettez le console.log ici pour s'assurer qu'il est exécuté après la réception des données.
+      });
+      this.http.get<any>('http://localhost:8080')
       .subscribe(response => {
         this.restaurants = response;
         console.log(response); // Mettez le console.log ici pour s'assurer qu'il est exécuté après la réception des données.

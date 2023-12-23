@@ -68,7 +68,7 @@
     >.presentation{
         color: rgb(4, 62, 100);
         >img{
-            width: 700vw;
+            width: 70vw;
             height: 250px;
         }
         >.details{
@@ -85,7 +85,34 @@
         }
     }
 }
-
+.recap{
+    position: fixed;
+    background-color: rgb(255, 172, 127);
+    box-shadow: 2px 4px 12px rgba(0,0,0,.2);
+    border-radius: 15px;
+    padding: 10px;
+    bottom:15px;
+    right: 5px;
+}
+.pannier{
+    
+    display: flex;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    >app-commande{
+        box-shadow: 2px 4px 12px rgba(0,0,0,.2);
+        background-color: white;
+        border-radius: 15px;
+        padding: 30px;
+        border: 1px solid;
+    }
+    >mat-icon{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    color: #000000;
+}
 @media (min-width: 450px){
     .presentation{
         >img{
