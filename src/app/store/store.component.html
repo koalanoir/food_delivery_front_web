@@ -9,21 +9,24 @@
         </div>
     </div>
     <div class="livraison">
-        <div class="item liv">Livraison</div>
-        <div class="item">Sur place</div>
+        <select name="livraison" id="livraison">
+            <option>Livraison</option>
+            <option>Sur place</option>
+        </select>
     </div>
     <label> La carte :</label> 
     <div class="menus">
-        <div *ngFor="let item of items" class="menu-item">
+        <div *ngFor="let item of items" class="menu-item" (click)="ajouter(item.id)">
+            <div class="photo">
+                <img [src]="item.photo" alt="plat">
+            </div>
             <div class="details">
                 <h3>{{item.nom}}</h3>
                 <p>{{item.prix}} fcfa</p>
                 {{item.ingredients}}
             </div>
-            <div class="photo">
-                <img [src]="item.photo" alt="plat">
-            </div>
-            <mat-icon (click)="ajouter(item.id)">add_shopping_cart</mat-icon>
+            <div class="add"><mat-icon (click)="ajouter(item.id)">add_shopping_cart</mat-icon></div>
+            
         </div>
     </div>
     <div *ngIf="getArticles()>0" (click)="voirPannier()" class="recap">
@@ -32,5 +35,5 @@
 </div>
 <div *ngIf="voir" class="pannier">
     <mat-icon (click)="fermerPannier()">close</mat-icon>
-    <app-commande [commande]="getCommande()"></app-commande>
+    <app-commande [ListeArticles]="getCommande()"></app-commande>
 </div>

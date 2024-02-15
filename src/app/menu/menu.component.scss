@@ -1,33 +1,45 @@
+.desktop{
+    display: none;
+}
 .container{
     display: flex;
     align-items: center;
     overflow-x: hidden;
-    padding: 10px;
+    padding: 5px;
     justify-content: space-between;
-    height: 70px;
     >.menu{
         >mat-icon{
             font-size: 30px;    
             font-weight:500
         }
-    }
-    >.logo{
-        font-size: 30px;
-        font-weight: bolder;
-        
-    }
-    >.login{
-        background-color: rgb(65, 196, 69);
-        color: rgb(0, 0, 0);
-        border-radius: 15px;
-        height: 30px;
-        border: none;
-        padding: 20px;
-        display: flex;
-        align-items: center;
+    } 
+}
+.logo{
+    font-weight: 400;
+    font-family: 'Bangers', cursive;
+    font-size: 25px;
+    text-align: center;
+    font-style: italic;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 0px #2d303a, -2px -2px 0px #2d303a, -2px 2px 0px #2d303a, 2px -2px 0px #2d303a;
+    color: rgba($color: #ffffff, $alpha: 1
+    );
+    border-radius: 70px;
+    rotate: -2deg;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgb(252, 252, 252) 0%, rgb(234, 234, 232) 50%, rgb(245, 59, 8) 100%);
+}
+.login{
+    background-color: rgb(65, 196, 69);
+    color: rgb(0, 0, 0);
+    border-radius: 15px;
+    height: 30px;
+    border: none;
+    padding: 20px;
+    display: flex;
+    align-items: center;
 
 
-    }
 }
 .full{
     display: flex;
@@ -39,4 +51,16 @@
     margin-bottom: 10px;
     border-bottom: 0.4px solid rgba($color: #000000, $alpha: 0.4);
 }
-
+@media (min-width: 450px) {
+    .full{
+        display: none;
+    }
+    .logo{
+        font-size: 50px;
+    }
+    .desktop{
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+}

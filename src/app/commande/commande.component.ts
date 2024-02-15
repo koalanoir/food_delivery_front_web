@@ -10,17 +10,21 @@ import { Commande } from '../models/Commande.model';
   styleUrls: ['./commande.component.scss']
 })
 export class CommandeComponent {
-  @Input()
-  commande!: Commande;
+
+  @Input() ListeArticles: any[] = [];
 
   constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute) {
 
   }
   
-  getCommandeArticles():Article[]{
-    return this.commande.getArticles()
+  getCommandeArticles(){
+    return []
   }
-  getTotal():number{
-    return this.commande.getCout()
+  getTotal(){
+    let total:number=0
+    for (let i of this.ListeArticles){
+      total+=i.getPrix()
+    }
+    return total
   }
 }

@@ -1,26 +1,31 @@
 <app-menu></app-menu>
 <div class="container">
-    <div class="localisation">
-        <div class="ville">
-            <select name="ville" id="ville">
-                <option>Pointe Noire</option>
-                <option>Brazzaville</option>
-              </select>
+    <div class="banniere">
+        <div class="localisation">
+            <div class="ville">
+                <select name="ville" id="ville">
+                    <option>Pointe Noire</option>
+                    <option>Brazzaville</option>
+                </select>
+            </div>
+            <div class="livraison">
+                <select name="livraison" id="livraison">
+                    <option>Livraison</option>
+                    <option>Sur place</option>
+                </select>
+            </div>
         </div>
-        <div class="livraison">
-            <div class="item">Livraison</div>
-            <div class="item">Sur place</div>
+        <div class="recherche">
+            <div>
+                <input id="input-recherche" placeholder="restaurants, plats, courses ..."/>
+            </div>
+            <div>
+                <mat-icon>search</mat-icon>
+            </div>
+            
         </div>
     </div>
-    <div class="recherche">
-        <div>
-            <input id="input-recherche" placeholder="restaurants, plats, courses ..."/>
-        </div>
-        <div>
-            <mat-icon>search</mat-icon>
-        </div>
-        
-    </div>
+
     <div *ngFor="let restaurant of restaurants" class="cards" (click)="goToRestaurantDetails( restaurant)">
         <img [src]="restaurant.photo" alt="">
         <div class="details">

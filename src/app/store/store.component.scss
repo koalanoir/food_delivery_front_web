@@ -16,16 +16,12 @@
     align-items: center;
     
     >.livraison{
-        background-color: rgba($color: #000000, $alpha: 0.06);
-        border-radius: 30px;
-        justify-content: space-around;
-        width: 200px;
-        color: rgb(4, 62, 100);
-        display: flex;
-        padding: 5px;
-        >.item{
+        >#livraison{
+            background-color: rgba($color: #000000, $alpha: 0.06);
             border-radius: 30px;
             padding: 10px;
+            text-align: center;
+            width: 200px;
             &:hover{
                 background-color: rgba($color: #ffffff, $alpha: 0.3);
             }
@@ -41,12 +37,13 @@
         margin-top: 30px;
         color: rgb(4, 62, 100);
         >.menu-item{
-            color: rgba($color: #000000, $alpha: 0.6);
+            color: rgba($color: #000000, $alpha: 0.9);
             border-bottom: 1px solid rgba($color: #000000, $alpha: 0.7);
             display: flex;
-            padding: 10px;
+            padding: 2px;
             width: 90vw;
             align-items: center;
+            flex-direction: column;
             justify-content: space-between;
             >.details{
                 font-size: 11px;
@@ -58,9 +55,11 @@
                     border-radius: 10px;
                 }
             }
-            >.mat-icon{
-                font-size: 23px;
-                box-shadow: 2px 4px 12px rgba(0,0,0,.2);
+            >.add{
+                background-color: rgba(43, 148, 71,0.5);
+                padding: 2px;
+                width: 100%;
+                text-align: center;
             }
 
         }
@@ -98,12 +97,15 @@
     
     display: flex;
     position: fixed;
+
     top: 15px;
     right: 15px;
     >app-commande{
         box-shadow: 2px 4px 12px rgba(0,0,0,.2);
         background-color: white;
         border-radius: 15px;
+        max-height: 80vh ;
+        overflow-y: auto;
         padding: 30px;
         border: 1px solid;
     }
@@ -120,6 +122,10 @@
             height: 300px !important;
             border-radius: 20px;
         }
+    }
+    .livraison{
+        width: 90vw;
+        float: right;
     }
     .menus{
         display: flex;
