@@ -50,7 +50,6 @@ export class StoreComponent {
   }
   public ajouter(id:any):void{
     this.articles+=1
-    
     let the_item
     for (const item of this.items) {
         if (item.id==id){
