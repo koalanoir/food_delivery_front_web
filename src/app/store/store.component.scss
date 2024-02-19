@@ -16,11 +16,11 @@
     align-items: center;
     >.livraison{
         >#livraison{
-            background-color: rgba($color: #000000, $alpha: 0.06);
+            background-color: rgba($color: #000000, $alpha: 0.1);
             border-radius: 30px;
             padding: 10px;
             text-align: center;
-            width: 200px;
+            font-size: large;
             &:hover{
                 background-color: rgba($color: #ffffff, $alpha: 0.3);
             }
@@ -53,6 +53,7 @@
     >.presentation{
         color: rgb(4, 62, 100);
         >img{
+            box-shadow: rgba(100, 100, 111, 0.8) 0px 7px 29px 0px;
             width: 70vw;
             height: 250px;
         }

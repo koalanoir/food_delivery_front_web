@@ -12,7 +12,7 @@
     display: inline-block;
     position: relative;
     outline: none;
-    background-color: white;
+    background-color: rgb(202, 218, 220);
   }
   
   /* Styles au survol */
@@ -103,6 +103,11 @@ app-footer{
 }
 
 @media (min-width: 450px) {
+    select {
+        color: #ffffff;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      
     #input-recherche{
         background-color: rgba($color: #ffffff, $alpha: 0.6);
       

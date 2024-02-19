@@ -27,10 +27,10 @@
     </div>
 
     <div *ngFor="let restaurant of restaurants" class="cards" (click)="goToRestaurantDetails( restaurant)">
-        <img [src]="restaurant.photo" alt="">
+        <img [src]="restaurant.photo" alt="{{restaurant.photo}}">
         <div class="details">
           <label><h2>{{ restaurant.nom }}</h2></label>
-          Délais de préparation {{ restaurant.delai }}
+          Délai de préparation {{ restaurant.delai }}
         </div>
     </div>
       
