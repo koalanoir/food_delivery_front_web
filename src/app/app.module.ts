@@ -14,6 +14,7 @@ import { CommandeComponent } from './commande/commande.component';
 import { environment } from '../environments/environment'; // Import environment
 import { AuthModule } from '@auth0/auth0-angular';
 import { FormulaireComponent } from './formulaire/formulaire.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +29,7 @@ import { FormulaireComponent } from './formulaire/formulaire.component';
     MatIconModule,
     HttpClientModule,
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     AuthModule.forRoot({
           domain: environment.domain_auth0,

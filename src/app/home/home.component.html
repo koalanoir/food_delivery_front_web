@@ -20,10 +20,10 @@
         </div>
         <div class="recherche">
             <div>
-                <input id="input-recherche" placeholder="restaurants, plats, courses ..."/>
+                <input id="input-recherche" (keyup)="rechercher()"   placeholder="restaurants, plats, courses ..."/>
             </div>
             <div>
-                <mat-icon>search</mat-icon>
+                <mat-icon (click)="rechercher()">search</mat-icon>
             </div>
             
         </div>
