@@ -101,7 +101,11 @@ app-footer{
         }
     }
 }
-
+.welcome{
+    color: #ffffff;
+    border-bottom: #ffffff 1px solid;
+    padding: 5px;
+}
 @media (min-width: 450px) {
     select {
         color: #ffffff;

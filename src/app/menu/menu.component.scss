@@ -28,6 +28,10 @@
     padding: 20px;
     display: flex;
     align-items: center;
+    &.deconnecter{
+        background-color: red;
+        color: white;
+    }
 
 
 }

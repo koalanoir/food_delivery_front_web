@@ -12,7 +12,15 @@
         <div class="logo" routerLink="">
             <img src="../../assets/colis.png" alt="logo">
         </div>
-        <button *ngIf="logout" class="login"> {{login}}</button>
+        <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+            <button class="login" (click)="auth.logout({ logoutParams: { returnTo: document.location.origin } })">
+              Se deconnecter
+            </button>
+          </ng-container>
+      
+          <ng-template #loggedOut>
+            <button class="login"  (click)="auth.loginWithRedirect()">Se connecter</button>
+          </ng-template>
     </div>
     <div class="slide" *ngIf="clicked">
         <div>
@@ -33,5 +41,13 @@
         <div>
             Devenir livreur
         </div>
-        <button *ngIf="logout" class="login"> {{login}}</button>
+        <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+            <button class="login deconnecter" (click)="auth.logout({ logoutParams: { returnTo: document.location.origin } })">
+              Se deconnecter
+            </button>
+          </ng-container>
+      
+          <ng-template #loggedOut>
+            <button class="login"  (click)="auth.loginWithRedirect()">Se connecter</button>
+          </ng-template>
 </div>

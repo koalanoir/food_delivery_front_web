@@ -21,6 +21,8 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
+    "@auth0/auth0-angular": "^2.2.3",
+    "dotenv": "^16.4.4",
     "firebase": "^10.7.1",
     "firebase-tools": "^12.9.1",
     "rxjs": "~7.8.0",

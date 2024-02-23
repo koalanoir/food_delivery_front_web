@@ -1,5 +1,7 @@
 export const environment = {
     production: false,
+    client_id_auth0:"34xy41blRbs2ZXhJuhFeJFFcnX0G8Wop",
+    domain_auth0:"dev-cjxhb-x9.eu.auth0.com",
     firebaseConfig: {
         apiKey: "AIzaSyCFyeQyC4E2fkq_rzR9TV-IfxBsnVXY1Tk",
         authDomain: "ubereat-2a258.firebaseapp.com",
