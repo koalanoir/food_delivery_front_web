@@ -3,15 +3,10 @@
     <div class="banniere">
         <div class="localisation">
             <div class="ville">
-                <select name="ville" id="ville">
+                <select (change)="filtre_ville($event)"  name="ville" id="ville">
+                    <option>Choisir une ville</option>
                     <option>Pointe Noire</option>
                     <option>Brazzaville</option>
-                </select>
-            </div>
-            <div class="livraison">
-                <select name="livraison" id="livraison">
-                    <option>Livraison</option>
-                    <option>Sur place</option>
                 </select>
             </div>
         </div>

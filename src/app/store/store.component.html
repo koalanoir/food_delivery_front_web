@@ -17,13 +17,15 @@
     <label> La carte :</label> 
     <div class="menus">
         <div *ngFor="let item of items" class="menu-item" (click)="ajouter(item.id)">
-            <div class="photo">
-                <img [src]="item.photo" alt="plat">
-            </div>
             <div class="details">
-                <h3>{{item.nom}}</h3>
-                <p>{{item.prix}} fcfa</p>
-                {{item.ingredients}}
+                <div class="infos">
+                    <h3>{{item.nom}}</h3>
+                    <p>{{item.prix}} fcfa</p>
+                    {{item.ingredients}}
+                </div>
+                <div class="photo">
+                    <img [src]="item.photo" alt="plat">
+                </div>
             </div>
             <div class="add"><mat-icon (click)="ajouter(item.id)">add_shopping_cart</mat-icon></div>
             
